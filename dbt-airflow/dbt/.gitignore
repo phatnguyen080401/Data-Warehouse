@@ -1,0 +1,7 @@
+target/
+dbt_modules/
+dbt_packages/
+logs/
+snapshots/
+tests/
+.user.yml
