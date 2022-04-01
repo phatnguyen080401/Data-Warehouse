@@ -1,0 +1,22 @@
+default:
+  outputs:
+    dev:
+      type: snowflake
+      ######## Please replace with your Snowflake account name 
+      ######## for example sg_demo.ap-southeast-1
+      account: ne40422.ap-southeast-1
+
+      ####### Replace with user and password of Snowflake account
+      user: "{{ env_var('dbt_user') }}" 
+      password: "{{ env_var('dbt_password') }}"
+
+      # user: blast4569852
+      # password: Ba4569852
+
+      role: tmdb_role
+      database: tmdb
+      warehouse: tmdb_wh
+      schema: tmdb_movies
+      threads: 5
+
+  target: dev
