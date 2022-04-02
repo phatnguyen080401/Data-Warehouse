@@ -8,7 +8,7 @@ select
   vote_count,
   weighted_rating as score
 from 
-  {{ ref("stg_moveies") }} m
+  {{ ref("stg_movies") }} m
 join 
   {{ ref("imdb_weighted_rating") }}
 using (movie_id)
