@@ -32,11 +32,28 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
+  # dbname
   tmdb:
-    # Config indicated by + and applies to all files under models/example/
-    transform:
-      +schema: transform
+    # Applies to all files under models/staging/
+    staging:
       +materialized: view
-    analysis:
-      +schema: analysis
-      +materialized: view
+
+    # Applies to all files under models/marts/
+    marts:
+      +materialized: table
+
+      # Applies to all files under models/marts/credits
+      credits:
+        +materialized: table
+      
+      # Applies to all files under models/marts/movies
+      movies:
+        +materialized: table
+      
+      # Applies to all files under models/marts/q_movies
+      q_movies:
+        +materialized: view
+
+      # Applies to all files under models/marts/score
+      score:
+        +materialized: view
