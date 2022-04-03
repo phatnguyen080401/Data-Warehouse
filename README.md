@@ -1,4 +1,4 @@
-# Data-Warehouse
+# TMDB-Analytics
 
 ## Introduction
 **TMDB Analytics with dbt, Airflow and Snowflake**
