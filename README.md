@@ -1,4 +1,4 @@
-# TMDB-Analytics
+# TMDB-Movies-And-Credits-Analytics
 
 ## Introduction
 **TMDB Analytics with dbt, Airflow and Snowflake**
