@@ -3,7 +3,7 @@
 ## Introduction
 **TMDB Analytics with dbt, Airflow and Snowflake**
 
-In this project, I will be analyzing our top movies & credits, and number of movies by decade from TMDB dataset. I use dbt to transform data, store to Snowflake warehouse and orchestrate data with Airflow.
+In this project, I will be analyzing our top movies & credits, and number of movies by decade from TMDB dataset. I use dbt to transform data, store to Snowflake warehouse and orchestrate workflows with Airflow.
 
 Here are the tools that I will be using:
 
