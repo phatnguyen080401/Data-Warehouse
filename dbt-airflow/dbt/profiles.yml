@@ -10,9 +10,6 @@ default:
       user: "{{ env_var('dbt_user') }}" 
       password: "{{ env_var('dbt_password') }}"
 
-      # user: blast4569852
-      # password: Ba4569852
-
       role: tmdb_role
       database: tmdb
       warehouse: tmdb_wh
