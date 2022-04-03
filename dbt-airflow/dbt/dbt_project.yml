@@ -36,10 +36,12 @@ models:
   tmdb:
     # Applies to all files under models/staging/
     staging:
+      +schema: staging
       +materialized: view
 
     # Applies to all files under models/marts/
     marts:
+      +schema: marts
       +materialized: table
 
       # Applies to all files under models/marts/credits
