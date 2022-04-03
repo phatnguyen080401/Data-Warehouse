@@ -5,4 +5,4 @@ select
 from 
   {{ ref("stg_credits") }}
 order by 3 desc
-limit 10;
+limit 10

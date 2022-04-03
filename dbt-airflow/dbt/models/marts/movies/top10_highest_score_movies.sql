@@ -13,4 +13,4 @@ join
   {{ ref("imdb_weighted_rating") }}
 using (movie_id)
 order by score desc
-limit 10;
+limit 10
