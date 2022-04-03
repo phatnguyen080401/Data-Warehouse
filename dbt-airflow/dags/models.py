@@ -10,7 +10,7 @@ default_args = {
     'retries': 0
 }
 
-with DAG('transformation_analysis', default_args=default_args, schedule_interval='@once') as dag:
+with DAG('dbt_models', default_args=default_args, schedule_interval='@once') as dag:
     staging = BashOperator(
         task_id='staging',
         bash_command='cd /dbt && dbt run --models staging --profiles-dir .',
@@ -45,7 +45,7 @@ with DAG('transformation_analysis', default_args=default_args, schedule_interval
     )
 
     movies = BashOperator(
-        task_id='tmdb_movies',
+        task_id='tmdb_movies_report',
         bash_command='cd /dbt && dbt run --models marts.movies --profiles-dir .',
         env={
             'dbt_user': '{{ var.value.dbt_user }}',
@@ -56,7 +56,7 @@ with DAG('transformation_analysis', default_args=default_args, schedule_interval
     )
 
     credits = BashOperator(
-        task_id='tmdb_credits',
+        task_id='tmdb_credits_report',
         bash_command='cd /dbt && dbt run --models marts.credits --profiles-dir .',
         env={
             'dbt_user': '{{ var.value.dbt_user }}',
